@@ -62,6 +62,10 @@ class Posts(models.Model):
     body = models.TextField()
     created_at = models.DateTimeField(default=datetime.now, blank=True)
 ```
+## 12-Create Migration:
+```
+$ C:\django\projects\djangoproject\python manage.py makemigrations posts
+```
 
 
 
