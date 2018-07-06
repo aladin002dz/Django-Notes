@@ -113,6 +113,7 @@ urlpatterns = [
     url(r'^posts/', include('posts.urls'))
 ]
 ```
+![alt text](https://github.com/aladin002dz/Django-Notes/blob/master/Template.png "django template page")
 ## 12-Create Model:
 in the file models.py
 ```py
