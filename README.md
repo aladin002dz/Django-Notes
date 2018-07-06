@@ -1,4 +1,5 @@
 # Django Notes
+These notes are taken from [Traversy Media Course](https://www.youtube.com/watch?v=D6esTdOLXh4).
 ## 1- Install python with pip(the package manager for python, npm of python).
 ## 2- Verify python and pip are correctelly installed:
 ```
