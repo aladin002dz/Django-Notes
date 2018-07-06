@@ -34,4 +34,7 @@ $ cd djangoproject
 $ python manage.py runserver
 ```
 it should give a message that it is running on "http://127.0.0.1:8000"
+and on the browser:  
+![alt text](https://github.com/aladin002dz/Django-Notes/blob/master/welcome.bmp "welcome django page")
+
 
