@@ -42,5 +42,28 @@ and on the browser:
 ```
 $ pip install mysqlclient
 ```
+## 10- Create an app:
+Create "posts" app for example
+```
+$ python manage.py startapp posts
+```
+## 11-Create Model:
+in the file models.py
+```py
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.db import models
+from datetime import datetime
+
+# Create your models here.
+class Posts(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    created_at = models.DateTimeField(default=datetime.now, blank=True)
+```
+
+
+
 
 
