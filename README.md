@@ -47,7 +47,73 @@ Create "posts" app for example
 ```
 $ python manage.py startapp posts
 ```
-## 11-Create Model:
+## 11- Create Templates Folder:
+- under the app folder "Posts", create a folder "templates" and under this folder create a folder "posts".
+- udpate views file views.py under the app folder:
+```
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def index(request):
+    #return HttpResponse('Hello from Posts')
+    return render(request, 'posts/index.html', {
+        'title': 'Latest Posts'
+    })
+```
+- Create layout.html under templates folder:
+```
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AladinStudio Blog</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+</head>
+<body>
+    <header class="container center-align">
+        <h1>AladinStudio Blog</h1>
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
+```
+- Create index.html under templates folder:
+```
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+<h3 class="center-align red lighten-3">{{title}}</h3>
+{% endblock %}
+```
+- update urls.py under the app folder:
+```
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index')
+];
+```
+- update urls.py under djangoproject
+```
+from django.conf.urls import url, include
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^posts/', include('posts.urls'))
+]
+```
+## 12-Create Model:
 in the file models.py
 ```py
 # -*- coding: utf-8 -*-
@@ -62,12 +128,14 @@ class Posts(models.Model):
     body = models.TextField()
     created_at = models.DateTimeField(default=datetime.now, blank=True)
 ```
-## 12-Create Migration:
+## 13-Create Migration:
 ```
 $ C:\django\projects\djangoproject\python manage.py makemigrations posts
 ```
-
-
+## 14-Add Model to Database:
+```
+$ C:\django\projects\djangoproject\python manage.py migrate
+```
 
 
 
