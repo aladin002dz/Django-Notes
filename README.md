@@ -38,4 +38,9 @@ and on the browser:
   
 ![alt text](https://github.com/aladin002dz/Django-Notes/blob/master/welcome.png "welcome django page")
 
+## 9- Install MySql Client:  
+```
+$ pip install mysqlclient
+```
+
 
