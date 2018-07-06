@@ -50,7 +50,7 @@ $ python manage.py startapp posts
 ## 11- Create Templates Folder:
 - under the app folder "Posts", create a folder "templates" and under this folder create a folder "posts".
 - udpate views file views.py under the app folder:
-```
+```py
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
@@ -65,7 +65,7 @@ def index(request):
     })
 ```
 - Create layout.html under templates folder:
-```
+```html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -87,7 +87,7 @@ def index(request):
 </html>
 ```
 - Create index.html under templates folder:
-```
+```py
 {% extends 'posts/layout.html' %}
 
 {% block content %}
@@ -95,7 +95,7 @@ def index(request):
 {% endblock %}
 ```
 - update urls.py under the app folder:
-```
+```py
 from django.conf.urls import url
 from . import views
 
@@ -104,7 +104,7 @@ urlpatterns = [
 ];
 ```
 - update urls.py under djangoproject
-```
+```py
 from django.conf.urls import url, include
 from django.contrib import admin
 
