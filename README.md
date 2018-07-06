@@ -139,4 +139,4 @@ $ C:\django\projects\djangoproject\python manage.py makemigrations posts
 $ C:\django\projects\djangoproject\python manage.py migrate
 ```
 
-[Code](https://github.com/bradtraversy/djangocrashcourse).
+## [Code](https://github.com/bradtraversy/djangocrashcourse)
