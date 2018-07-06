@@ -28,3 +28,10 @@ C:\django\projects>mkvirtualenv py1
 ```
 $ django-admin startproject djangoproject
 ```
+### 8- Run the server
+```
+$ cd djangoproject
+$ python manage.py runserver
+```
+it should give a message that it is running on "http://127.0.0.1:8000"
+
