@@ -1,5 +1,6 @@
 # Django Notes
 These notes are taken from [Traversy Media Course](https://www.youtube.com/watch?v=D6esTdOLXh4).
+
 ## 1- Install python with pip(the package manager for python, npm of python).
 ## 2- Verify python and pip are correctelly installed:
 ```
@@ -138,5 +139,4 @@ $ C:\django\projects\djangoproject\python manage.py makemigrations posts
 $ C:\django\projects\djangoproject\python manage.py migrate
 ```
 
-
-
+[Code](https://github.com/bradtraversy/djangocrashcourse).
